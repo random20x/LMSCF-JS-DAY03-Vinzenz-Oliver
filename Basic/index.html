@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>JavaScript DAY03</title>
+	<style type="text/css" media="screen">
+		
+	</style>
+</head>
+<body>
+
+	<script>
+		var temp = (Math.random() * 30)-5;
+		console.log (temp);
+
+		if (temp <= 10) {
+			document.write("The weather is cold <br>")
+		} else {
+			document.write("The weather is moderate<br>")
+		}
+
+		var array = [1,7,-3,9];
+
+		function maxarray(){
+			var max = Math.max(...array);
+			document.write(max +"<br>");
+		}
+		maxarray();
+
+
+		function findMax(arr){
+			var max = arr[0];
+		for(var i = 1 ; i < arr.length ; i++){
+			if(arr[i]> max){
+				max = arr[i];
+			}
+			}
+		console.log(max)
+		}
+
+		findMax([1,222,8,77,50]);
+
+		
+		function multiply (array) {
+    		var multi = 1;
+    			for (var i = 0; i < array.length;  i++) {
+        			multi = multi * array[i];
+   				 }
+   				console.log(multi); 
+    			return multi;
+    			
+			}
+
+			multiply([1,2,3,4]);
+
+
+		function FindAverage (array){
+			var result = 0;
+			var final = 0;
+
+			for (var i = 0; i < array.length; i++){
+				result =  result + array[i];
+			}
+
+				final = result / array.length
+			
+
+    		if (final < 60) {
+    			document.write("you got an F --> GO STUDY HARDER");
+    		}
+
+    		else if (final >=60 && final <70){
+    			document.write("you got a D --> VIER GEWINNT");
+    		}
+
+			else if (final >=70 && final <80){
+    			document.write("you got a C --> okay");
+    		}
+
+    		else if (final >=80 && final <90){
+    			document.write("you got a B --> good");
+    		}
+
+    		else if (final >=90 && final <=100)
+    			document.write("you got an A --> good job");
+		}
+
+		FindAverage([100,90,80,30,99])
+
+
+		function Advanced2(){
+			var i = 1;
+			var rst = "";
+
+			
+
+			do {
+				
+				var y = i % 3;
+				var z = i % 5;
+				if ( y == 0 &&  z ==  0) {
+			document.write("FizzBuzz<br>")
+			}
+
+			else if ( z == 0) {
+			document.write("Buzz<br>")
+			}
+
+			else if ( y == 0 ){
+			document.write("Fizz<br>")
+			}else {
+				document.write(i+ "<br>")
+			}
+			i++;
+			}
+			while (i <= 100);
+			
+			
+				}
+				Advanced2()
+	</script>
+
+
+</body>
+</html>
